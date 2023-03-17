@@ -47,8 +47,20 @@ def get_data():
     return jsonify(students)
 
 # Might be able to delete below method
-# @app.route('/')
-# def index():
+# @app.route('/add', methods=["POST"], strict_slashes=False)
+# def add_students():
+#     school_id = request.json['school_id']
+#     name = request.json['name']
+#     points = request.json['points']
+
+#     newStudent = Profile(
+#         school_id=school_id,
+#         name=name,
+#         points=points
+#     )
+
+#     db.session.add(newStudent)
+#     db.session.commit()
 #     students = Profile.query.all()
 #     for row in students:
 #         return{"Fname: ",row.first_name, "Lname:",row.last_name, "SchId:", row.school_id, "Age:", row.age}
